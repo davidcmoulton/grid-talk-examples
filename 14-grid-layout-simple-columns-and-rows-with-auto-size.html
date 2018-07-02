@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grid layout</title>
+    <link rel="stylesheet" href="meta.css">
+
+    <style>
+        .grid {
+            /* define the explicit grid */
+            display: grid; /* turn on the grid */
+            grid-gap: 20px; /* shorthand to define both row and column gap */
+            grid-template-columns: 200px 200px 200px; /* explictly create three column tracks */
+            grid-template-rows: 200px 100px; /* explicitly create the first two row tracks */
+
+            grid-auto-rows: 300px; /* define size of rows in the implicit grid */
+        }
+        /*.note { display: block; }*/
+
+
+    </style>
+
+</head>
+<body>
+
+    <h1>Grid with auto sizing</h1>
+
+
+    <div class="grid">
+        <div>one</div>
+        <div>two</div>
+        <div>three</div>
+        <div>four</div>
+        <div>five</div>
+        <div>six</div>
+        <div>seven</div>
+        <div>eight</div>
+        <div>nine</div>
+        <div>ten</div>
+    </div>
+
+    <p class="note">The rows in the implicit grid are now sized using <code>grid-auto-rows</code></p>
+
+</body>
+</html>

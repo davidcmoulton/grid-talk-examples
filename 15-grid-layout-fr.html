@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grid layout</title>
+    <link rel="stylesheet" href="meta.css">
+
+    <style>
+        .grid {
+            display: grid; /* define the explicit grid */
+            grid-gap: 20px; /* set up the spacing */
+
+            /*grid-template-columns: 200px 200px 200px;*/
+            /*grid-template-columns: 33.3% 33.3% 33.3%; !* doesn't take grid gap into account *!*/
+            /*grid-template-columns: calc(33.3% - 20px) calc(33.3% - 20px) calc(33.3% - 20px); !* doesn't correctly take grid gap into account, because only 2 grid gaps  for 3 columns. Gets complicated very quickly *!*/
+            /*grid-template-columns: 1fr 1fr 1fr; !* fr is proportion of available space after gap calculation *!*/
+            /*grid-template-columns: 1fr 1fr 300px; !* can mix absolute unit with fr *!*/
+            grid-template-columns: minmax(200px, 1fr) 2fr 300px; /* can specify min and max constraints */
+        }
+
+        .note { display: block; }
+    </style>
+
+</head>
+<body>
+
+    <h1>Responsive grid tracks</h1>
+
+    <p class="note">The new <code>fr</code> unit represents a fraction of the available space in the grid container (after taking account of all the grid gaps). It means you don't have to keep calculating percentages to define the widths within a flexible grid.</p>
+
+
+    <div class="grid">
+        <div>one</div>
+        <div>two</div>
+        <div>three</div>
+        <div>four</div>
+        <div>five</div>
+        <div>six</div>
+        <div>seven</div>
+        <div>eight</div>
+        <div>nine</div>
+        <div>ten</div>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grid layout</title>
+    <link rel="stylesheet" href="meta.css">
+
+    <style>
+
+        @supports(display: grid-gap) {
+
+            .grid {
+                display: grid;
+                grid-gap: 20px;
+
+                /*grid-template-columns: repeat(5, minmax(150px, 1fr));*/
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* could also use auto-fill */
+
+            }
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <h1>Auto-fit auto-fill</h1>
+
+    <div class="grid">
+        <div>one</div>
+        <div>two</div>
+        <div>three</div>
+        <div>four</div>
+        <div>five</div>
+        <div>six</div>
+        <div>seven</div>
+        <div>eight</div>
+        <div>nine</div>
+        <div>ten</div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+body {
+  background-color: rgba(255, 0, 0, 0.051);
+  font-family: sans-serif;
+  padding: 0;
+}
+
+.grid {
+  /*background-image: repeating-linear-gradient(-45deg,     #0288d1,*/
+  /*#0288d1 20px,*/
+  /*#629f43 20px,*/
+  /*#629f43 40px);*/
+  /*background-color: #fff;*/
+  /*margin: 0 auto;*/
+  /*width: 600px;*/
+}
+
+.grid > * {
+  box-sizing: border-box;
+  color: #fff;
+  padding: 12px 24px;
+}
+
+.grid > :nth-child(odd) {
+  background-color: #0288d1;
+
+}
+
+.grid > :nth-child(even) {
+  background-color: #629f43;
+}
+
+.note {
+  display: none;
+}
+
+.extra {
+  display: none;
+}

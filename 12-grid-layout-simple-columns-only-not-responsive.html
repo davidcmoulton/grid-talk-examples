@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grid layout</title>
+    <link rel="stylesheet" href="meta.css">
+
+    <style>
+        .grid {
+            display: grid; /* define the explicit grid. Does nothing by itself. */
+           grid-gap: 20px; /* add the gutter */
+            grid-template-columns: 200px 200px 200px; /* create the column tracks. Note browser creates implicit grid */
+        }
+
+        .note { display: block; }
+
+    </style>
+
+</head>
+<body>
+                                  Î
+  <h1>Simple, non-responsive grid with only columns specified </h1>
+
+    <div class="grid">
+        <div>one</div>
+        <div>two</div>
+        <div>three</div>
+        <div>four</div>
+        <div>five</div>
+        <div>six</div>
+        <div>seven</div>
+        <div>eight</div>
+        <div>nine</div>
+        <div>ten</div>
+    </div>
+
+    <p class="note">Note that there are more grid items than will fit into the explicti grid we defined: we only specified 3 columns, but the browser needs to do something with the remaining grid items, so it creates an implicit grid to hold the rest.</p>
+
+</body>
+</html>

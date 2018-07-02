@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grid layout</title>
+    <link rel="stylesheet" href="meta.css">
+
+    <style>
+        .grid {
+            display: grid; /* define the explicit grid */
+            grid-gap: 20px; /* set up the spacing */
+
+            /*grid-template-columns: 100px 1fr 2fr 1fr 2fr; !* fr is proportion of available space after gap calculation *!*/
+            grid-template-columns: 100px repeat(2, 1fr 2fr); /* repeat explicit grid tracks */
+
+        }
+    </style>
+
+</head>
+<body>
+
+    <h1>Repeating explicit grid tracks</h1>
+
+    <div class="grid">
+        <div>one</div>
+        <div>two</div>
+        <div>three</div>
+        <div>four</div>
+        <div>five</div>
+        <div>six</div>
+        <div>seven</div>
+        <div>eight</div>
+        <div>nine</div>
+        <div>ten</div>
+    </div>
+
+</body>
+</html>

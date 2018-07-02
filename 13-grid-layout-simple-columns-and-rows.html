@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grid layout</title>
+    <link rel="stylesheet" href="meta.css">
+
+    <style>
+        .grid {
+            display: grid; /* define the explicit grid. Does nothing by itself. */
+            grid-gap: 20px; /* add the gutter */
+            grid-template-columns: 200px 200px 200px; /* create the column tracks. Note browser creates implicit grid */
+
+            grid-template-rows: 200px 100px; /* create the row tracks */
+        }
+            .note { display: block; }
+            .extra { display: block; }
+
+
+    </style>
+
+</head>
+<body>
+
+    <h1>Simple grid - columns and rows</h1>
+
+    <div class="grid">
+        <div>one</div>
+        <div>two</div>
+        <div>three</div>
+        <div>four</div>
+        <div>five</div>
+        <div>six</div>
+        <div>seven</div>
+        <div>eight<span class="extra"> has some more text just to prove a point.</span></div>
+        <div>nine</div>
+        <div>ten</div>
+    </div>
+
+    <p class="note">The explicit grid we've defined now covers 2 rows and all 3 columns. Items below the first two rows are laid out by the implicit grid. Note that items in the implicit grid are only as high as they need to be to fit their content.</p>
+
+    <p class="extra">All items in the row take the same size. So as the middle item grows in height to accommodate the extra content, the other grid items on the same row take the same height to preserve the grid structure.</p>
+
+    <p class="extra">This was <b>hard</b> to do in CSS before now.</p>
+
+</body>
+</html>

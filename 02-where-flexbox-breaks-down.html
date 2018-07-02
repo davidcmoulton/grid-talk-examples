@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Where flexbox breaks down</title>
+  <link rel="stylesheet" href="meta.css">
+
+  <style>
+
+    .grid {
+      background-image: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    div {
+      flex: 1 1 150px;
+      margin-bottom: 10px;
+      margin-right: 10px;
+      text-align: center;
+    }
+
+  </style>
+
+</head>
+<body>
+
+<div class="grid">
+  <div>one</div>
+  <div>two</div>
+  <div>three</div>
+  <div>four</div>
+  <div>five</div>
+  <div>six</div>
+</div>
+
+</body>
+</html>
